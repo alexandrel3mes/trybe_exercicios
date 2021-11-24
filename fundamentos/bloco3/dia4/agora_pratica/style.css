@@ -34,8 +34,10 @@ table {
 table th {
     background-color: #224486ff;
     color: aliceblue;
-    
 }
+
+td:hover {
+    box-shadow: 0 0 0.5px 0.5px #282a2d;}
 
 ul {
     list-style-type: none;
