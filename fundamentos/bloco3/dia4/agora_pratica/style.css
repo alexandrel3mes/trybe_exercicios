@@ -121,3 +121,7 @@ h3{
 .link_nav:hover {
     box-shadow: 0 0 0.5px 0.5px #282a2d;
 }
+
+#popo:hover {
+    text-decoration: line-through;
+}
