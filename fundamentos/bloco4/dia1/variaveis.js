@@ -1,9 +1,18 @@
-const nota = 100;
+let trafficLight = "verde";
 
-if (nota >=80) {
-console.log("Parabéns, você foi aprovado!")
-} else if (nota < 80 && nota >= 60) {
-    console.log("Voce esta na nossa lista de espera!")
-} else {
-    console.log("Voce foi reprovado")
-} 
+switch (trafficLight) {
+	case "vermelho":
+		console.log("pare");
+		break;
+
+	case "amarelo":
+        console.log("atenção");
+		break;
+	
+	case "verde":
+		console.log("siga")
+		break;
+
+	default: //irá executar caso nenhum dos anteriores for real
+		console.log("valor não identificado")
+}
