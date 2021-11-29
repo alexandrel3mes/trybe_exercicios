@@ -55,20 +55,22 @@ console.log(maior);
 // Exercicio 6
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-let numerosImpares;
+let numerosImpares = 0;
 
-let numero;
+
 
 for (i = 0; i < numbers.length; i += 1) {
-  numero = numbers[i];
 
-  if (numero % 2 != 0) {
+
+  if (numbers[i] % 2 != 0) {
+    
     numerosImpares += 1;
 
+    if (numerosImpares === 0) {
+      console.log("nenhum valor ímpar encontrado")
     }
-
-
-
+  
+  }
 }
 
 console.log(numerosImpares);
