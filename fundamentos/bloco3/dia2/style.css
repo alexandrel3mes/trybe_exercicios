@@ -1,0 +1,38 @@
+h1 {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+}
+
+ul{
+    background-color: red;
+    line-height: 30px;
+}
+
+.outra_cor{
+    background-color: royalblue;
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+    font-style: normal;
+    text-decoration: rgb(180, 145, 141);
+}
+
+body {
+    font-size: 16px;
+    text-align: center;
+}
+
+#amarelo {
+    background-color: yellow;
+}
+
+#vermelho {
+    background-color: red;
+}
+
+#marrom {
+    background-color: brown;
+}
