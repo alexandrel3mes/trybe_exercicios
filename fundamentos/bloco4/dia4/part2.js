@@ -99,3 +99,60 @@ function nomeMaior (nomes) {
 
 
 console.log(nomeMaior(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+
+/* 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
+Valor esperado no retorno da função: 2 . */
+
+function maisRepetido(numeros) {
+    let contRepetido = 0;
+    let contNumero = 0;
+    let indexNumeroRepetido = 0;
+
+
+    for (let index in numeros) {
+      let verificaNumero = numeros[index];
+
+      /* Primeiro sai 2 */
+
+      for (let index2 in numeros) {
+        if (verificaNumero === numeros[index2]) {
+          contNumero += 1;
+        }
+
+        /* contNumero sai 3 */
+
+      }
+      if (contNumero > contRepetido) {
+        contRepetido = contNumero;
+        indexNumeroRepetido = index;
+      }
+      contNumero = 0;
+    }
+    return numeros[indexNumeroRepetido];
+  }
+console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3]))
+
+/* 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+Valor de teste: N = 5 .
+Valor esperado no retorno da função: 1+2+3+4+5 = 15 . */
+
+function somatorio (n) {
+
+    let numero = [];
+    let soma = 0;
+
+    for (index = 0; index <= n; index += 1) {
+        numero.push(n - index);
+    }
+
+    for (index2 = 0; index2 < numero.length; index2 += 1){
+        soma += numero[index2]
+    }
+
+    return soma
+
+}
+
+console.log(somatorio(5));
