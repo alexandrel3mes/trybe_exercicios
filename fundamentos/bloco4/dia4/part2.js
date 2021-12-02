@@ -79,3 +79,23 @@ console.log(indiceDoMenorValor([2, 4, 6, 7, 10, 0, -3]));
 Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']; .
 Valor esperado no retorno da função: Fernanda . */
 
+
+function nomeMaior (nomes) {
+
+    let maiorNome = nomes[0];
+
+    for (let elements in nomes) {
+
+
+
+        if (maiorNome.length < nomes[elements].length) {
+            maiorNome = nomes[elements];
+        }
+    }
+
+    return maiorNome;
+
+}
+
+
+console.log(nomeMaior(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
