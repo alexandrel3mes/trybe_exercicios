@@ -69,4 +69,16 @@ document.getElementById("netoDoOnde").parentElement.parentElement.nextElementSib
 
 /* Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho . */
 
+document.getElementById("pai").removeChild(primeiroFilho);
+document.getElementById("pai").removeChild(terceiroFilho);
+document.getElementById("pai").removeChild(quartoEUltimoFilho);
+document.getElementById("pai").removeChild(irmaoDoElemento);
+
+
+document.getElementById("elementoOndeVoceEsta").removeChild(segundoEUltimoFilhoDoFilho);
+document.getElementById("elementoOndeVoceEsta").removeChild(filhoDoOnde);
+
+document.getElementById("primeiroFilhoDoFilho").removeChild(netoDoOnde);
+
+
 
