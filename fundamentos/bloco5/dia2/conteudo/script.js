@@ -66,3 +66,7 @@ document.getElementById("netoDoOnde").parentElement.parentElement.nextElementSib
 
 
 // Parte 3
+
+/* Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho . */
+
+
