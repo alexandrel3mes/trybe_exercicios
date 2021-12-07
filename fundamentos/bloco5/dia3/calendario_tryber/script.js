@@ -76,3 +76,37 @@ function createDaysOfTheWeek() {
           document.getElementsByClassName('holiday')[2].style.backgroundColor = "rgb(238,238,238)";
         }
       }
+
+
+      //Exercicio 4
+
+      function criaBotaoSexta (string) {
+        let btn = document.createElement("button");
+        btn.setAttribute('type', 'button');
+        btn.setAttribute('id', 'btn-friday');
+        btn.innerText = string;
+        document.querySelector(".buttons-container").appendChild(btn);
+    }
+
+    criaBotaoSexta ("Sexta-feira");
+
+      //Exercicio 5
+
+      let botaoSexta = document.getElementById('btn-friday')
+      botaoSexta.addEventListener('click', clicaSexta);
+
+      let sextaContent = document.getElementsByClassName('friday')[0].innerText;
+
+      function clicaSexta () {
+          if (document.getElementsByClassName('friday')[0].innerText == '4'){
+            document.getElementsByClassName('friday')[0].innerText = 'É sextaaa';
+            document.getElementsByClassName('friday')[1].innerText = 'É sextaaa';
+            document.getElementsByClassName('friday')[2].innerText = 'É sextaaa';
+            document.getElementsByClassName('friday')[3].innerText = 'É sextaaa';
+          } else {
+            document.getElementsByClassName('friday')[0].innerText = '4';
+            document.getElementsByClassName('friday')[1].innerText = '11';
+            document.getElementsByClassName('friday')[2].innerText = '18';
+            document.getElementsByClassName('friday')[3].innerText = '25';
+          }
+      }
