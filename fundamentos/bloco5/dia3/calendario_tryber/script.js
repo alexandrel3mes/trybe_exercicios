@@ -110,3 +110,35 @@ function createDaysOfTheWeek() {
             document.getElementsByClassName('friday')[3].innerText = '25';
           }
       }
+
+      //Exercicio 6
+
+      for (let indexDay = 0; indexDay <= 33; indexDay += 1) {
+        document.getElementsByClassName('day')[indexDay].addEventListener('mouseenter', diaZoomIn);
+        document.getElementsByClassName('day')[indexDay].addEventListener('mouseleave', diaZoomOut);
+      }
+
+
+      function diaZoomIn (event) {
+        event.target.style.fontSize = 'xxx-large';
+      }
+
+      function diaZoomOut (event) {
+        event.target.style.fontSize = 'large';
+      }
+
+
+
+      //Exercicio 7
+      
+
+
+    
+      function addTarefa (tarefa) {
+          let newTarefa = document.createElement('span');
+          newTarefa.innerText = tarefa;
+          document.querySelectorAll('.my-tasks')[0].appendChild(newTarefa)
+      }
+
+      addTarefa ('Cozinhar');
+      
