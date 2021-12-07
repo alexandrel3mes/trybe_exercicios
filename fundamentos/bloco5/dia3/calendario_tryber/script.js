@@ -132,13 +132,15 @@ function createDaysOfTheWeek() {
       //Exercicio 7
       
 
-
-    
       function addTarefa (tarefa) {
-          let newTarefa = document.createElement('span');
+          let newTarefa = document.createElement("span");
           newTarefa.innerText = tarefa;
-          document.querySelectorAll('.my-tasks')[0].appendChild(newTarefa)
+          document.querySelector(".my-tasks").appendChild(newTarefa);
       }
 
-      addTarefa ('Cozinhar');
+      addTarefa ("Cozinhar");
+
+
+
+      //Exercicio 8
       
