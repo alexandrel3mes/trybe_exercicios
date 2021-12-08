@@ -133,19 +133,11 @@ let resetBtn = document.getElementById('reset');
 resetBtn.addEventListener('click', resetou);
 
 function resetou () {
-    if (
-        document.getElementById('bd').style.backgroundColor == 'black' || document.getElementById('bd').style.backgroundColor == 'white' || document.getElementById('bd').style.backgroundColor == 'rgb(207, 207, 207)' ||
-        document.getElementById('bd').style.color == 'black' || document.getElementById('bd').style.color == 'white' || document.getElementById('bd').style.color == 'red' ||
-        document.getElementById('bd').style.fontSize == '5px' || document.getElementById('bd').style.fontSize == '10px' || document.getElementById('bd').style.fontSize == '100px' ||
-        document.getElementById('bd').style.lineHeight == '5px' || document.getElementById('bd').style.lineHeight == '50px' || document.getElementById('bd').style.lineHeight == '100px' ||
-        document.getElementById('para').style.fontFamily == 'Redacted Script' || document.getElementById('para').style.fontFamily == 'Quicksand' || document.getElementById('para').style.fontFamily == 'Montserrat'
-    ) {
-        document.getElementById('bd').style.backgroundColor == 'rgb(216, 216, 216)'
-        document.getElementById('bd').style.color == 'black'
-        document.getElementById('bd').style.fontSize == '15px'
-        document.getElementById('bd').style.lineHeight == '8px'
-        document.getElementById('para').style.fontFamily == 'Times New Roman'
-    }
-
-    return
+    document.getElementById('bd').style.backgroundColor = 'rgb(216, 216, 216)';
+    document.getElementById('bd').style.color = 'black';
+    document.getElementById('bd').style.fontSize = '15px';
+    document.getElementById('bd').style.lineHeight = '25px';
+    document.getElementById('para').style.fontFamily = 'Times New Roman';
 }
+
+
