@@ -163,7 +163,7 @@ function resetou () {
     localStorage.setItem('color', 'black');
     localStorage.setItem('fontSize', '15px');
     localStorage.setItem('lineHeight', '25px');
-    localStorage.setItem('fontFamily', 'Times New Roman');
+    localStorage.setItem('fontfamily', 'Times New Roman');
 
 
 }
