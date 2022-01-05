@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <!-- Nome  -->
+        <label for="nome">Nome:
+            <input id="nome" type="text" name="nome" maxlength="40" required>
+        </label>
+        <br>
+        <!-- Email  -->
+        <label for="email">E-mail:
+            <input id="email" type="email" name="email" maxlength="50" required>
+        </label>
+        <br>
+        <!-- CPF  -->
+        <label for="cpf">CPF:
+            <input id="cpf" type="text" name="cpf" maxlength="11" required pattern="[0-9]+">
+        </label>
+        <br>
+        <!-- Endereço  -->
+        <label for="adress">Endereço:
+            <input id="adress" type="text" name="adress" maxlength="200" required>
+        </label>
+        <br>
+        <!-- Cidade  -->
+        <label for="city">Cidade:
+            <input id="city" type="text" name="city" maxlength="28" required>
+        </label>
+        <br>
+        <!-- Estado  -->
+        <label for="state">Estado:
+            <select id="state">
+
+            </select>
+        </label>
+        <br>
+        <!-- Tipo  -->
+        <label for="casa">Casa
+            <input id="casa" type="radio" name="type" value="casa" required>
+        </label>
+
+        <label for="ape">Apartamento
+            <input id="ape" type="radio" name="type" value="ape" required>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <!-- Resumo -->
+        <!-- Cargo -->
+        <!-- Descrição -->
+        <!-- Data de inicio -->
+    </fieldset>
+    <script src="script.js"></script>
+</body>
+</html>
