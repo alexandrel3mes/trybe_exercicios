@@ -18,5 +18,9 @@ function nadaRola (event) {
 INPUT_TEXT.addEventListener('keypress', soA);
 
 function soA (event) {
-    
+    let val = event.charCode;
+    if (val != 097) {
+        event.preventDefault();
+        console.log('uepa')
+    }
 }
