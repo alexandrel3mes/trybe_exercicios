@@ -1,7 +1,5 @@
 window.onload = function () {
     let estadoCampo = document.getElementById('state');
-
-    let op = document.createElement('option')
     let states = ['Acre','Alagoas',
         'Amapá',
         'Amazonas',
@@ -27,10 +25,22 @@ window.onload = function () {
         'Santa Catarina',
         'São Paulo','Sergipe','Tocantins']
 
-        for (let index of states) {
-            op;
-            op.innerText = index;
+        for (index = 0; index <= states.length - 1; index += 1) {
+            let op = document.createElement('option')
+            op.innerText = states[index];
             estadoCampo.appendChild(op)
 
         }
+}
+
+document.getElementById('clean').addEventListener('click', reset)
+
+function reset () {
+    window.location.reload()
+}
+
+document.getElementById('form').addEventListener('submit', lock)
+
+function lock (event) {
+    event.preventDefault();
 }
