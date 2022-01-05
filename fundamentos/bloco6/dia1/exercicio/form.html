@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" id="form">
+        <fieldset>
+            <!-- Nome  -->
+            <label for="nome">Nome:
+                <input id="nome" type="text" name="nome" maxlength="40" required>
+            </label>
+            <br>
+            <!-- Email  -->
+            <label for="email">E-mail:
+                <input id="email" type="email" name="email" maxlength="50" required>
+            </label>
+            <br>
+            <!-- CPF  -->
+            <label for="cpf">CPF:
+                <input id="cpf" type="text" name="cpf" maxlength="11" required pattern="[0-9]+">
+            </label>
+            <br>
+            <!-- Endereço  -->
+            <label for="adress">Endereço:
+                <input id="adress" type="text" name="adress" maxlength="200" required>
+            </label>
+            <br>
+            <!-- Cidade  -->
+            <label for="city">Cidade:
+                <input id="city" type="text" name="city" maxlength="28" required>
+            </label>
+            <br>
+            <!-- Estado  -->
+            <label for="state">Estado:
+                <select id="state">
+
+                </select>
+            </label>
+            <br>
+            <!-- Tipo  -->
+            <label for="casa">Casa
+                <input id="casa" type="radio" name="type" value="casa" required>
+            </label>
+
+            <label for="ape">Apartamento
+                <input id="ape" type="radio" name="type" value="ape" required>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <!-- Resumo -->
+            <label for="resumo">Resumo do Currículo: <br>
+                <textarea id="resumo" maxlength="1000" rows="10" cols="30" required placeholder="Faça um resumo do que você fazia" required></textarea>
+            </label>
+            <br>
+            <!-- Cargo -->
+            <label for="cargo">Qual foi seu último emprego?
+                <input id="cargo" type="text" maxlength="40" required>
+            </label>
+            <br>
+            <!-- Descrição -->
+            <label for="des">Descrição do cargo:
+                <input id="des" type="text" maxlength="500" required>
+            </label>
+            <br>
+            <!-- Data de inicio -->
+            <label for="data">Data de início:
+                <input id="data" type="date" required>
+            </label>
+        </fieldset>
+
+        <button id="lock">Tranca</button>
+        <input id="envia" type="submit">
+        <button id="clean">Limpa</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
