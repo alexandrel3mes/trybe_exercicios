@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p style="background-color: aliceblue; padding: 5px;">Color: <span id="value">white</span></p>
+      <button id="previous">Previous color</button>
+      <button id="next">Next color</button>
+      <button id="random">Random color</button>
+    </div>
+    <script>
+      const nextBtn = document.getElementById('next');
+      const previousBtn = document.getElementById('previous');
+      const randomBtn = document.getElementById('random');
+
+      const ESTADO_INICIAL = {
+        colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+        index: 0,
+      };
+
+      function criarCor() {
+    const oneChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+    let cor = '#';
+    const aleatorio = () => Math.floor(Math.random() * oneChar.length);
+    for (let i = 0; i < 6; i += 1) {
+        cor += oneChar[aleatorio()];
+    }
+    return cor;
+}
+
+      const next = ({type: 'NEXT_COLOR'});
+      const prev = ({type: 'PREV_COLOR'});
+      const rand = ({type: 'RANDOM_COLOR'});
+
+      const reducer = (state = ESTADO_INICIAL, action) => {
+        if (state.index < state.colors.length - 1 && state.index > 0)  {
+          switch(action.type) {
+            case 'NEXT_COLOR':
+              return {
+                ...state,
+                index: state.index + 1,
+              }
+              case 'PREV_COLOR':
+              return {
+                ...state,
+                index: state.index - 1,
+              }
+              case 'RANDOM_COLOR':
+              return {
+                colors: [...state.colors, criarCor()],
+                index: state.colors.length,
+              }
+            default:
+            return state;
+          }
+        }
+        else if (state.index === 0) {
+          switch(action.type) {
+            case 'RANDOM_COLOR':
+              return {
+                colors: [...state.colors, criarCor()],
+                index: state.colors.length,
+              }
+            case 'NEXT_COLOR':
+              return {
+                ...state,
+                index: state.index + 1,
+              }
+              case 'PREV_COLOR':
+              alert('Da mais não')
+              
+            default:
+            return state;
+          }
+        }
+        else if (state.index === state.colors.length - 1) {
+          switch(action.type) {
+            case 'RANDOM_COLOR':
+              return {
+                colors: [...state.colors, criarCor()],
+                index: state.colors.length,
+              }
+            case 'PREV_COLOR':
+              return {
+                ...state,
+                index: state.index - 1,
+              }
+              case 'NEXT_COLOR':
+              alert('Da mais não')
+            default:
+            return state;
+          }
+        }
+        else {
+          alert('Da mais não')
+          return state;
+        }
+      }
+
+      const store = Redux.createStore(reducer)
+
+      
+      const val = document.getElementById('value');
+      const cont = document.getElementById('container');
+      store.subscribe(() => {
+        val.innerHTML = store.getState().colors[store.getState().index]
+        cont.style.backgroundColor = store.getState().colors[store.getState().index]
+      });
+
+
+      nextBtn.addEventListener('click', () => store.dispatch(next));
+      previousBtn.addEventListener('click', () => store.dispatch(prev));
+      randomBtn.addEventListener('click', () => store.dispatch(rand));
+    </script>
+  </body>
+</html>
