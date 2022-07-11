@@ -4,5 +4,6 @@ const controller = require('../msc/controllers/bookController');
 
 router.get('/', controller.getAll);
 router.get('/:id', controller.findById);
+router.post('/', controller.create);
 
 module.exports = router;

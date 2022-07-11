@@ -5,6 +5,7 @@ const getAll = async (_req, res) => {
 
   return res.status(200).json(allBooks);
 }
+
 const findById = async (req, res) => {
   const { id } = req.params;
   const bookById = await bookService.findById(id);
@@ -15,7 +16,15 @@ const findById = async (req, res) => {
   return res.status(200).json(bookById);
 }
 
+const create = async (req, res) => {
+  const { title, author, pageQuantity } = req.body;
+
+  const newUser = await bookService.create(title, author, pageQuantity);
+  return res.status(201).json(newUser);
+}
+
 module.exports = {
   getAll,
   findById,
+  create,
 }
